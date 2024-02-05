@@ -24,5 +24,11 @@ pipeline {
       }
     }
 
+    stage('Junit formatted test results') {
+      steps {
+        sh '**/target/surefire-reports/'
+      }
+    }
+
   }
 }
