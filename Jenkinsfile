@@ -21,7 +21,7 @@ pipeline {
     stage('Unit Test') {
       steps {
         sh './mvnw "-Dtest=**/petclinic/*/*.java" test'
-        junit './mvnw test'
+        junit '**/target/surefire-reports/TEST-*.xml'
       }
     }
 
